@@ -1,0 +1,3 @@
+plugins:
+editable email notification (email)
+pipeline view (script)
