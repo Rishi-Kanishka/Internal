@@ -6,25 +6,25 @@ pipeline {
     stages {
         stage('Clone & Clean') {
             steps {
-                // bat 'rmdir /s /q internalmaven'
-                bat 'git clone https://github.com/bhavagna06/internalmaven.git'
-                bat 'mvn clean -f internalmaven'
+                // bat 'rmdir /s /q Maven'
+                bat 'git clone https://github.com/Rishi-Kanishka/Maven.git'
+                bat 'mvn clean -f Maven'
             }
         }
         stage('install') {
             steps {
-                bat 'mvn install -f internalmaven'
+                bat 'mvn install -f Maven'
             }
         }
         stage('Test') {
             steps {
-                bat 'mvn test -f internalmaven'
+                bat 'mvn test -f Maven'
             }
         }
         stage('Package') {
             steps {
-                bat 'mvn package -f internalmaven'
+                bat 'mvn package -f Maven'
             }
-        }
-    }
+        }
+    }
 }
